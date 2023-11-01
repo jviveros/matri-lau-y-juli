@@ -73,15 +73,14 @@
                 <div class="header-nav">
                     <nav>
                         <ul class="primary-nav">
-                            <li><a href="#intro">How we met</a></li>
-                            <li><a href="#events">Events</a></li>
-                            <li><a href="#instagram">Instagram</a></li>
-                            <li><a href="#eng-pics">Engagement</a></li>
+                            <li><a href="#events">Agenda</a></li>
+                            <li><a href="#dress-code">Dress Code</a></li>                            
+                            <li><a href="#map">Lugar</a></li>
                             <li class="hidden-sm hidden-xs"><a href="#video-bg">Glimpse of the city</a></li>
                         </ul>
                         <ul class="member-actions">
                             <li><a href="#map" class="login">Venue</a></li>
-                            <li><a href="#rsvp" class="btn-white btn-small">RSVP</a></li>
+                            <li><a href="#rsvp" class="btn-white btn-small">Confirmar</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -105,11 +104,40 @@
         <div class="row">
             <div class="col-sm-4 hidden-xs"></div>
             <div class="col-sm-4 hidden-xs text-center"><a href="#rsvp"
-                                                           class="btn btn-accent btn-large rsvp-btn">RSVP</a></div>
+                                                           class="btn btn-accent btn-large rsvp-btn">Confirmar</a></div>
             <div class="col-sm-4 hidden-xs"></div>
         </div>
     </div>
     <div class="down-arrow floating-arrow"><a href="#invitation"><i class="fa fa-angle-down"></i></a></div>
+</section>
+
+<section id="nombre-invitado">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h2 id="nombrePersona"></h2>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Función para obtener el parámetro 'nombre' de la URL
+        function obtenerNombreDeURL() {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get('l');
+        }
+
+        // Función para mostrar el nombre en el contenedor div
+        function mostrarNombre() {
+            const nombre = obtenerNombreDeURL();
+            if (nombre) {
+                const nombreOriginal = atob(nombre);
+                document.getElementById('nombrePersona').textContent = nombreOriginal;
+            }
+        }
+
+        // Llama a la función para mostrar el nombre cuando se cargue la página
+        window.addEventListener('load', mostrarNombre);
+    </script>
 </section>
 
 <section id="invitation" class="section-padding">
@@ -137,57 +165,28 @@
                 <div class="wp3">
                     <p><strong>27 de Enero, 2024</strong></p>
 
-                    <h5>Bienvenida <span class="time">3 PM - 4 PM</span></h5>
-                    <p>It's one of the oldest traditional Indian pre wedding ceremony where the bride and groom
-                        attend the event together and a professional mehndi artist applies
-                        mehndi to the bride's hands and feet. This will be having a celebratory
-                        festival feel to it with people wearing vibrant clothes and dancing, singing, playing
-                        games and a lot more.</p>
+                    <h5>Bienvenida <span class="time">3 PM - 3:30 PM</span></h5>                    
                 </div>
                 <div class="wp5">
-                    <h5>Ceremonia <span class="time">4 PM - 5 PM</span></h5>
-                    <p>This event is no way close to ethnic. The bride & groom would like to have some "shots before the
-                        knot". With booze flowing down the floor and the western attire on, everyone would be busy
-                        showing off their new moves on the stage which they have finely honed. Lastly, expect some beer
-                        pong matches & karaoke for sure.</p>
+                    <h5>Ceremonia <span class="time">3:30 PM - 5 PM</span></h5>                    
                 </div>
                 <div class="wp3">
-                    <h5>Coctél <span class="time">5 PM - 6 PM</span></h5>
-                    <p>The haldi ceremony is usually held separately for the bride and the groom. This one is for the
-                        bride. It is a low-key event that involves the application of turmeric paste on the hands, legs
-                        and face of the bride. The groom is not allowed to see the bride after this ritual until the
-                        final wedding ceremony starts.</p>
+                    <h5>Coctél <span class="time">5 PM - 6 PM</span></h5>                    
+                </div>
+                <div class="wp4">
+                    <h5>Brindis y Fotos <span class="time">6 PM - 7 PM</span></h5>                    
+                </div>
+                <div class="wp6">
+                    <h5>Cena <span class="time">7 PM - 8 PM</span></h5>                    
+                </div>
+                <div class="wp6">
+                    <h5>Fiesta <span class="time">8 PM - 12 AM</span></h5>                    
                 </div>
             </div>
             <div class="col-md-6 col-sm-12 col-xs-12 rightcol">
                 <div class="wp4">
-                    <h5>Brindis y Fotos <span class="time">6 PM - 7 PM</span></h5>
-                    <p>This is the main event in the entire wedding when the bride and the groom tie the
-                        knot. The groom comes with the barat and is greeted by the bride side with some dhol of course
-                        as maximum number of guests would be attending this event. This is when the couple circle the
-                        sacred fire and are finally declared husband and wife.</p>
+                    <h5>Foto</h5>                    
                 </div>
-                <div class="wp6">
-                    <h5>Cena <span class="time">7 PM - 8 PM</span></h5>
-                    <p>The haldi ceremony is usually held separately for the bride and the groom. This one is for the
-                        bride. It is a low-key event that involves the application of turmeric paste on the hands, legs
-                        and face of the bride. The groom is not allowed to see the bride after this ritual until the
-                        final wedding ceremony starts.</p>
-                </div>
-                <div class="wp6">
-                    <h5>Fiesta <span class="time">8 PM - 12 AM</span></h5>
-                    <p>The haldi ceremony is usually held separately for the bride and the groom. This one is for the
-                        bride. It is a low-key event that involves the application of turmeric paste on the hands, legs
-                        and face of the bride. The groom is not allowed to see the bride after this ritual until the
-                        final wedding ceremony starts.</p>
-                </div>
-            </div>
-        </div>
-        <div class="row section-padding">
-            <div class="col-md-4 col-md-offset-4 text-center">
-                <a class="btn btn-accent btn-small" data-toggle="modal" data-target="#dc-modal">
-                    <i class="fa fa-barcode"></i>&nbsp;&nbsp;Dress code
-                </a>
             </div>
         </div>
         <!--<div class="row">
@@ -196,14 +195,19 @@
         </div>-->
     </div>
 
-    <div id="dc-modal" class="modal fade" tabindex="-1" role="dialog">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span>&times;</span>
-                    </button>
-                    <h3 class="text-center section-padding">Ugh... dress codes?</h3>
-                    <h5>Mehndi <span class="time">1PM - 5PM</span></h5>
+</section>
+
+<section class="events section-padding" id="dress-code">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h3 class="header">DRESS CODE</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-sm-12 col-xs-12 leftcol">
+                <div class="wp3">
+                    <h5>Mujeres</h5>
                     <p>
                         <strong>Ethnic indian wear</strong>
                         <br>
@@ -213,7 +217,11 @@
                         their <a href="https://www.pinterest.com/ramswarooppatra/mehndi-dress-for-men/">vibrant
                         kurtas</a> with pants or pyjamas along with an optional shawl.
                     </p>
-                    <h5>Cocktail Night <span class="time">7PM - 12AM</span></h5>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-12 col-xs-12 rightcol">
+                <div class="wp4">
+                    <h5>Hombres</h5>
                     <p>
                         <strong>Western attire</strong>
                         <br>
@@ -222,24 +230,14 @@
                         <a href="https://www.pinterest.com/ramswarooppatra/cocktail-night-outfit-for-women/">ladies</a>
                         & <a href="https://www.pinterest.com/ramswarooppatra/cocktail-night-outfit-for-men/">gents</a>.
                     </p>
-                    <h5>Wedding <span class="time">6PM-12AM</span></h5>
-                    <p>
-                        <strong>Indo-western</strong>
-                        <br>
-                        Ladies can flaunt their unconventional sarees,
-                        <a href="https://www.pinterest.com/ramswarooppatra/indo-western-lehengas/">lehengas</a>,
-                        <a href="https://www.pinterest.com/ramswarooppatra/indo-western-anarkalis/">anarkalis</a>,
-                        dresses and the list
-                        goes on whereas gentlemen can wear any kind of suit or just blazer. If you don't like to wear a
-                        suit/blazer, you can do a <a
-                            href="https://www.pinterest.com/ramswarooppatra/high-neck-jackets-for-men/">high-neck
-                        (band gala) waistcoat & shirt</a> combo.
-                    </p>
                 </div>
-            </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
-
+            </div>
+        </div>
+        <!--<div class="row">
+            <div class="col-xs-12 section-border section-padding">
+            </div>
+        </div>-->
+    </div>
 </section>
 
 <section id="video-bg" class="hidden-sm hidden-xs">
@@ -254,8 +252,10 @@
 
 <section id="map" class="section-padding">
     <div class="text-center">
-        <h3>How do I get there?</h3>
-        <p>It's way easier than you think!</p>
+        <h3>Lugar</h3>
+        <h4>Hacienda San Marcos</h4>
+        <h4>Cota, Cundinamarca, Colombia</h4>
+        <h4> </h4>
     </div>
     <div id="map-canvas"></div>
     <div id="map-content-wrapper" class="container pointer-events-none">
@@ -263,14 +263,14 @@
             <div class="col-xs-offset-1 col-xs-10 col-md-offset-3 col-md-6">
                 <div class="text-center">
                     <div id="btn-show-content" class="toggle-map-content pointer-events-auto">
-                        <i class="fa fa-info-circle"></i>&nbsp;&nbsp; Show info
+                        <i class="fa fa-info-circle"></i>&nbsp;&nbsp; Ver información
                     </div>
                 </div>
                 <div id="map-content" class="pointer-events-auto">
                     <div class="row">
                         <div class="col-md-6">
-                            <h5>ITC Fortune Park</h5>
-                            <p>Kona Expressway, Howrah, West Bengal 711403, India</p>
+                            <h5>Hacienda San Marcos</h5>
+                            <p>Km 2 Nueva Variante Cota, Cundinamarca, Colombia</p>
                         </div>
                         <div class="col-md-6">
                             <h5>Mr. Amit Roy</h5>
@@ -281,12 +281,11 @@
                     <div class="row text-center">
                         <div class="col-md-6" style="padding: 5px;">
                             <a class="btn btn-fill btn-small"
-                               href="https://m.uber.com/ul/?action=setPickup&client_id=Yh7Dl6SjB56RY2JuuZF8ttVa6ryFV78W&pickup=my_location&dropoff[formatted_address]=Fortune%20Park%20Panchwati%20-%20Hotels%20in%20Kolkata%2C%20Howrah%2C%20West%20Bengal%2C%20India&dropoff[latitude]=22.593276&dropoff[longitude]=88.270277"><i
-                                    class="fa fa-taxi"></i>&nbsp;&nbsp;Book Uber</a>
+                               href="https://m.uber.com/ul/?action=setPickup&client_id=Yh7Dl6SjB56RY2JuuZF8ttVa6ryFV78W&pickup=my_location&dropoff[formatted_address]=Hacienda%20San%20Marcos%20Eventos%2C%20Km%202%20Variante%2C%20Cota%2C%20Cundinamarca%2C%20Colombia&dropoff[latitude]=4.798885&dropoff[longitude]=-74.103189"><i
+                                    class="fa fa-taxi"></i>&nbsp;&nbsp;Pedir Uber</a>
                         </div>
                         <div class="col-md-6" style="padding: 5px;">
-                            <a class="btn btn-accent btn-small" id="btn-show-map"><i class="fa fa-map-marker"></i>&nbsp;&nbsp;Show
-                                map</a>
+                            <a class="btn btn-accent btn-small" id="btn-show-map"><i class="fa fa-map-marker"></i>&nbsp;&nbsp;Ver mapa</a>
                         </div>
                     </div>
                 </div>
@@ -304,8 +303,8 @@
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span>&times;</span>
                     </button>
                     <div class="section-padding">
-                        <h3>Thank you!</h3>
-                        <p>We are glad to see you join us on our big day.</p>
+                        <h3>Gracias!</h3>
+                        <p>Nos alegra que nos acompañes en nuestro gran día.</p>
                         <div id="add-to-cal"></div>
                     </div>
                 </div>
@@ -316,8 +315,8 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6 col-md-offset-3">
-                <h3>What are you waiting for?</h3>
-                <p>We would greatly appreciate if you could RSVP before 1st of November '17</p>
+                <h3>Confirmar asistencia</h3>
+                <p>Te agradeceríamos mucho que pudieras confirmar tu asistencia antes del 31 de diciembre de 2023.</p>
                 <form id="rsvp-form" class="rsvp-form"
                       action=""
                       method="POST">
