@@ -1,0 +1,12 @@
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.espaciado {
+  margin-bottom: 40px; /* Espacio entre los elementos div con la clase "elemento-estilizado" */
+}
+
+.centrado {
+  text-align: center; /* Centra el texto horizontalmente */
+}

@@ -50,6 +50,7 @@
         }
     </script>
 
+    <link rel="stylesheet" href="css/jv-css.css">
     <link rel="stylesheet" href="css/normalize.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/jquery.fancybox.css">
@@ -132,6 +133,7 @@
             if (nombre) {
                 const nombreOriginal = atob(nombre);
                 document.getElementById('nombrePersona').textContent = nombreOriginal;
+                document.querySelector('input[name="name"]').value = nombreOriginal;
             }
         }
 
@@ -162,30 +164,29 @@
         </div>
         <div class="row">
             <div class="col-md-6 col-sm-12 col-xs-12 leftcol">
-                <div class="wp3">
+                <div class="wp3 espaciado centrado">
                     <p><strong>27 de Enero, 2024</strong></p>
-
                     <h5>Bienvenida <span class="time">3 PM - 3:30 PM</span></h5>                    
                 </div>
-                <div class="wp5">
+                <div class="wp5 espaciado centrado">
                     <h5>Ceremonia <span class="time">3:30 PM - 5 PM</span></h5>                    
                 </div>
-                <div class="wp3">
+                <div class="wp3 espaciado centrado">
                     <h5>Coctél <span class="time">5 PM - 6 PM</span></h5>                    
                 </div>
-                <div class="wp4">
+                <div class="wp4 espaciado centrado">
                     <h5>Brindis y Fotos <span class="time">6 PM - 7 PM</span></h5>                    
                 </div>
-                <div class="wp6">
+                <div class="wp6 espaciado centrado">
                     <h5>Cena <span class="time">7 PM - 8 PM</span></h5>                    
                 </div>
-                <div class="wp6">
+                <div class="wp6 espaciado centrado">
                     <h5>Fiesta <span class="time">8 PM - 12 AM</span></h5>                    
                 </div>
             </div>
             <div class="col-md-6 col-sm-12 col-xs-12 rightcol">
                 <div class="wp4">
-                    <h5>Foto</h5>                    
+                    <img src="img/IMG_6041.jpg" />                 
                 </div>
             </div>
         </div>
@@ -202,6 +203,7 @@
         <div class="row">
             <div class="col-md-12">
                 <h3 class="header">DRESS CODE</h3>
+                <p>Estamos encantados de compartir este día especial en un entorno campestre y rústico, con un toque de elegancia. Para que todos se sientan cómodos y a la moda, les sugerimos el siguiente dress code.</p>
             </div>
         </div>
         <div class="row">
@@ -209,8 +211,16 @@
                 <div class="wp3">
                     <h5>Mujeres</h5>
                     <p>
-                        <strong>Ethnic indian wear</strong>
+                        <strong>Garden attire wedding</strong>
                         <br>
+                        Opta por un vestido ligero o una falda elegante en colores suaves y tonos naturales que reflejen la belleza del jardín.
+                        <br><br>
+                        Complementa tu vestido o falda con una blusa delicada o un suéter de lana ligera para mantenerte abrigada.
+                        <br><br>
+                        Elige botines o zapatos cerrados que combinen con tu conjunto y te mantengan cómoda en el clima fresco.
+                        <br><br>
+                        Agrega un toque de elegancia y mantén el calor con una bufanda o chal de colores suaves que combinen con tu atuendo.
+                        <br><br>
                         Ladies can wear something
                         <a href="https://www.pinterest.com/ramswarooppatra/mehndi-dress-for-women/">bright & vivid</a>
                         and gentlemen can be on
@@ -223,12 +233,17 @@
                 <div class="wp4">
                     <h5>Hombres</h5>
                     <p>
-                        <strong>Western attire</strong>
+                        <strong>Vestido de paño con corbata / Elegancia Rústica</strong>
                         <br>
-                        A semi-formal look that is contemporary & fashionable which is not too prim & proper is the best
-                        to pull off this night. You can see some pins for
-                        <a href="https://www.pinterest.com/ramswarooppatra/cocktail-night-outfit-for-women/">ladies</a>
-                        & <a href="https://www.pinterest.com/ramswarooppatra/cocktail-night-outfit-for-men/">gents</a>.
+                        Opta por un pantalón de vestir en tonos grises, marrones o verdes oscuros.
+                        <br><br>
+                        Combina tu pantalón con una camisa blanca o en colores suaves que armonicen con el entorno campestre.
+                        <br><br>
+                        Añade un toque de sofisticación con una corbata que complemente tu conjunto.
+                        <br><br>
+                        Completa tu atuendo con zapatos y cinturón en colores como coñac, marrón o cualquier tono terroso que refleje el ambiente rústico.
+                        <br><br>
+                        Opcional: Si lo deseas, puedes reemplazar el saco del vestido por un blazer en un tono que te sientas cómodo, aunque no sea del mismo color que el pantalón.                    
                     </p>
                 </div>
             </div>
@@ -317,51 +332,85 @@
             <div class="col-md-6 col-md-offset-3">
                 <h3>Confirmar asistencia</h3>
                 <p>Te agradeceríamos mucho que pudieras confirmar tu asistencia antes del 31 de diciembre de 2023.</p>
-                <form id="rsvp-form" class="rsvp-form"
-                      action=""
+                <form id="rsvp-formulario" class="rsvp-form"
+                      action="https://script.google.com/macros/s/AKfycbx9vIA28KiJI1WG7tJskOm41Fri2g8rO3B7Dgyh-JQyMeTkXdN_pwei67JyvRyxPaH5/exec"
                       method="POST">
                     <div class="row">
                         <div class="col-md-6 col-sm-6">
                             <div class="form-input-group">
-                                <i class="fa fa-envelope"></i><input type="email" name="email" class=""
-                                                                     placeholder="Your email"
+                                <i class="fa fa-user"></i><input name="name" class=""
+                                                                 placeholder="Your name"
+                                                                 required readonly id="nombre-form">
+                            </div>
+                        </div>
+
+                        
+
+                        <div class="col-md-6 col-sm-6">
+                            <div class="form-input-group">
+                                <i class="fa fa-envelope"></i><input type="phone" name="phone" class=""
+                                                                     placeholder="Teléfono"
                                                                      required>
                             </div>
                         </div>
-                        <div class="col-md-6 col-sm-6">
-                            <div class="form-input-group">
-                                <i class="fa fa-user"></i><input name="name" class=""
-                                                                 placeholder="Your name"
-                                                                 required>
-                            </div>
-                        </div>
+                        
                     </div>
-                    <div class="row">
+                    <div class="row"> 
                         <div class="col-md-6 col-sm-6">
+                            <p>Por favor, especifica a continuación si tienes alguna condición especial, como la necesidad de un plato vegetariano o si padeces alguna alergia.</p>
                             <div class="form-input-group">
-                                <i class="fa fa-users"></i><input type="number" name="extras" class="" min="0"
-                                                                  max="4"
-                                                                  placeholder="Husband/Wife or kids"
-                                                                  required>
+                                <i class="fa fa-cutlery"></i><input name="food" class=""
+                                                                 placeholder=""
+                                                                 >
                             </div>
-                        </div>
-                        <div class="col-md-6 col-sm-6">
-                            <div class="form-input-group">
-                                <i class="fa fa-key"></i><input type="number" name="invite_code" id="invite_code"
-                                                                class="" min="0"
-                                                                placeholder="Invite code"
-                                                                required>
-                            </div>
-                        </div>
+                        </div>                                            
                     </div>
                     <div class="row">
                         <div class="col-md-12" id="alert-wrapper"></div>
                     </div>
                     <button class="btn-fill rsvp-btn">
-                        Yes,
-                        that's me!
+                        <strong>Enviar confirmación!</strong>
                     </button>
                 </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="events section-padding" id="gifts">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h3 class="header">REGALOS</h3>
+                <p>Queridos amigos y seres queridos, su presencia en nuestro día especial es el regalo más preciado que podríamos recibir. Estamos emocionados de compartir este momento único con cada uno de ustedes y creemos que su amor y apoyo son los tesoros más grandes que podemos imaginar.</p>                
+                <p>En todo caso, si desean hacernos un regalo, su consideración y generosidad serán apreciadas profundamente.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-sm-12 col-xs-12 leftcol">
+                <div class="wp3">
+                    <h5>Lluvia de sobres</h5>
+                    <p>
+                        El día de nuestro evento habrá un buzón especialmente preparado donde podrán depositar sus sobres de buenos deseos y cariño. Estaremos encantados de recibir sus mensajes y gestos de afecto en este día tan especial.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-12 col-xs-12 rightcol">
+                <div class="wp4">
+                    <h5>Medios digitales</h5>
+                    <p>
+                        Si prefieren optar por métodos digitales, hemos habilitado varias alternativas para su comodidad. Les proporcionamos enlaces a diferentes plataformas, y pueden elegir la que mejor se adapte a su preferencia.
+                    </p>
+                    <li>[Enlace a plataforma de pago digital 1]</li>
+                    <li>[Enlace a plataforma de pago digital 2]</li>
+                    <li>[Enlace a plataforma de pago digital 3]</li>
+                    <br>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <p>Agradecemos su flexibilidad y generosidad al considerar estas opciones. Su apoyo en cualquier forma es muy apreciado y será recordado con gratitud en este día tan especial."</p>
             </div>
         </div>
     </div>
@@ -372,7 +421,7 @@
         <div class="row">
             <div class="col-sm-12 text-center content">
                 <span class="to-top-wrapper"><a href="#top" class="to-top"><i class="fa fa-angle-up"></i></a></span>
-                <p>Crafted by Ram with lots of <span class="fa fa-heart pulse2"></span> for Antara</p>
+                <p>Adaptado por Julián con <span class="fa fa-heart pulse2"></span> para mi Laurita</p>
             </div>
         </div>
     </div>
@@ -386,7 +435,7 @@
 <script src="js/vendor/ouical.js"></script>
 <script src="js/scripts.min.js"></script>
 <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBlPw3GQYI3faa_9mRE6plWuM7xNEmrwH0&callback=initMap"></script>
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBoyqhaAwVWqUu0yDJE52OEJBIvqaTg25Y&callback=initMap"></script>
 <!-- Google Analytics -->
 <script>
     (function (i, s, o, g, r, a, m) {
