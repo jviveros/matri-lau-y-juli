@@ -10,3 +10,8 @@ img {
 .centrado {
   text-align: center; /* Centra el texto horizontalmente */
 }
+
+.logo-jl {
+  margin-left: -5px;
+  margin-top: 150px;
+}
