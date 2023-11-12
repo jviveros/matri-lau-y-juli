@@ -15,3 +15,8 @@ img {
   margin-left: -5px;
   margin-top: 150px;
 }
+
+#respuesta-container {
+  display: none;
+  color: green;
+}
