@@ -131,7 +131,7 @@
         function mostrarNombre() {
             const nombre = obtenerNombreDeURL();
             if (nombre) {
-                const nombreOriginal = atob(nombre);
+                const nombreOriginal = decodeURIComponent(escape(atob(nombre)));
                 document.getElementById('nombrePersona').textContent = nombreOriginal;
                 document.querySelector('input[name="name"]').value = nombreOriginal;
             }
