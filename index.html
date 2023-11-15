@@ -134,6 +134,7 @@
                 const nombreOriginal = decodeURIComponent(escape(atob(nombre)));
                 document.getElementById('nombrePersona').textContent = nombreOriginal;
                 document.querySelector('input[name="name"]').value = nombreOriginal;
+                document.getElementById('nombre-label').textContent = nombreOriginal;                
             }
         }
 
@@ -218,7 +219,7 @@
                 <div class="wp4">
                     <h5>Hombres</h5>
                     <p>
-                        <strong><a href="https://pin.it/4Uh5xC0" target="_blank">Elegancia Rústica</a></strong>                        
+                        <strong><a href="https://pin.it/7rC2cXf" target="_blank">Elegancia Rústica</a></strong>                        
                     </p>
                 </div>
             </div>
@@ -356,7 +357,9 @@
                       method="POST">
                     <div class="row">
                         <div class="col-md-6 col-sm-6">
-                            <div class="form-input-group">
+                            <p class="grande"><strong>Invitado(s):</strong></p>
+                            <h3 id="nombre-label"></h3>
+                            <div class="form-input-group" hidden>
                                 <i class="fa fa-user"></i><input name="name" class=""
                                                                  placeholder="Your name"
                                                                  required readonly id="nombre-form">
@@ -376,7 +379,7 @@
                     </div>
                     <div class="row"> 
                         <div class="col-md-6 col-sm-6">
-                            <p>Por favor, especifica a continuación si tienes alguna condición especial, como la necesidad de un plato vegetariano o si padeces alguna alergia.</p>
+                            <p >Por favor, especifica a continuación si necesitas un plato vegetariano, si padeces alguna alergia o algún otro comentario.</p>
                             <div class="form-input-group">
                                 <i class="fa fa-cutlery"></i><input name="food" class=""
                                                                  placeholder=""
