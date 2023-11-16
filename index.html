@@ -108,7 +108,7 @@
             <div class="col-sm-4 hidden-xs"></div>
         </div>
     </div>
-    <div class="down-arrow floating-arrow"><a href="#invitation"><i class="fa fa-angle-down"></i></a></div>
+    
 </section>
 
 <section id="nombre-invitado">
@@ -351,41 +351,39 @@
             <div class="col-md-6 col-md-offset-3">
                 <p></p>
                 <h3 id="titulo-asistencia">Confirmar asistencia</h3>
-                <p id="texto-asistencia" class="grande">Te agradecemos mucho confirmar tu asistencia antes del 31 de diciembre de 2023.</p>
+                <p id="texto-asistencia" class="grande">Te agradecemos mucho confirmar tu asistencia antes del 15 de diciembre de 2023.</p>
                 <form id="rsvp-formulario" class="rsvp-form"
                       action="https://script.google.com/macros/s/AKfycby6zTABrZlyMnA5P8LgPQF70OUVuNtuv-OAS4ipmItaOxoDGo2absOMyVhcjGL0pvgv/exec"
                       method="POST">
                     <div class="row">
-                        <div class="col-md-6 col-sm-6">
-                            <p class="grande"><strong>Invitado(s):</strong></p>
+                        <h4 class="grande"><strong>Invitado(s):</strong></h4>
                             <h3 id="nombre-label"></h3>
+                        
+                            <div class="col-md-6 col-sm-6">
+                                <div class="form-input-group">
+                                    <i class="fa fa-phone"></i><input type="phone" name="phone" class=""
+                                                                         placeholder="Teléfono"
+                                                                         required>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 col-sm-6">                            
                             <div class="form-input-group" hidden>
                                 <i class="fa fa-user"></i><input name="name" class=""
                                                                  placeholder="Your name"
                                                                  required readonly id="nombre-form">
                             </div>
-                        </div>
-
-                        
-
-                        <div class="col-md-6 col-sm-6">
-                            <div class="form-input-group">
-                                <i class="fa fa-phone"></i><input type="phone" name="phone" class=""
-                                                                     placeholder="Teléfono"
-                                                                     required>
-                            </div>
-                        </div>
-                        
+                        </div>                    
                     </div>
                     <div class="row"> 
                         <div class="col-md-6 col-sm-6">
-                            <p >Por favor, especifica a continuación si necesitas un plato vegetariano, si padeces alguna alergia o algún otro comentario.</p>
+                            <p>Por favor, indica a continuación si necesitas un plato vegetariano, si padeces alguna alergia o algún otro comentario.</p>
                             <div class="form-input-group">
                                 <i class="fa fa-cutlery"></i><input name="food" class=""
-                                                                 placeholder=""
-                                                                 >
+                                                                 placeholder="Comentario">
                             </div>
-                        </div>                                            
+                        </div>
+                                                                    
                     </div>
                     <div class="row">
                         <div class="col-md-12" id="alert-wrapper"></div>
